@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre CCL 발표자료</title>
+    <!-- Require the peer dependencies of face-landmarks-detection. -->
+    <script src="https://unpkg.com/@tensorflow/tfjs-core@2.4.0/dist/tf-core.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-converter@2.4.0/dist/tf-converter.js"></script>
+
+    <!-- You must explicitly require a TF.js backend if you're not using the tfjs union bundle. -->
+    <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.4.0/dist/tf-backend-webgl.js"></script>
+    <!-- Alternatively you can use the WASM backend: <script src="https://unpkg.com/@tensorflow/tfjs-backend-wasm@2.4.0/dist/tf-backend-wasm.js"></script> -->
+
+    <!-- Require face-landmarks-detection itself. -->
+    <script src="https://unpkg.com/@tensorflow-models/face-landmarks-detection@0.0.1/dist/face-landmarks-detection.js">
+    </script>
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+
+</head>
+
+<body>
+    <button type="button" onclick="init()">Start</button>
+    <video id="webcam" autoplay playsinline width="640" height="480"></video>
+    <!-- <canvas id="canvas" class="d-none"></canvas> -->
+    <!-- <audio id="snapSound" src="audio/snap.wav" preload="auto"></audio> -->
+    <script src="./ai.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "ccl_smilegate",
+  "version": "1.0.0",
+  "description": "CCL Presentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mommocmoc/ccl_smilegate.git"
+  },
+  "keywords": [
+    "ai",
+    "game"
+  ],
+  "author": "JaeHwan So",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mommocmoc/ccl_smilegate/issues"
+  },
+  "homepage": "https://github.com/mommocmoc/ccl_smilegate#readme",
+  "dependencies": {
+    "@tensorflow-models/facemesh": "0.0.5",
+    "@tensorflow/tfjs-converter": "^2.7.0",
+    "@tensorflow/tfjs-core": "^2.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1"
+  }
+}
