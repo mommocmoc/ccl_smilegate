@@ -1,31 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre CCL 발표자료</title>
-    <!-- Require the peer dependencies of face-landmarks-detection. -->
-    <script src="https://unpkg.com/@tensorflow/tfjs-core@2.4.0/dist/tf-core.js"></script>
-    <script src="https://unpkg.com/@tensorflow/tfjs-converter@2.4.0/dist/tf-converter.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <!-- You must explicitly require a TF.js backend if you're not using the tfjs union bundle. -->
-    <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.4.0/dist/tf-backend-webgl.js"></script>
-    <!-- Alternatively you can use the WASM backend: <script src="https://unpkg.com/@tensorflow/tfjs-backend-wasm@2.4.0/dist/tf-backend-wasm.js"></script> -->
+	<title>reveal.js</title>
 
-    <!-- Require face-landmarks-detection itself. -->
-    <script src="https://unpkg.com/@tensorflow-models/face-landmarks-detection@0.0.1/dist/face-landmarks-detection.js">
-    </script>
-    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 </head>
 
 <body>
-    <button type="button" onclick="init()">Start</button>
-    <video id="webcam" autoplay playsinline width="640" height="480"></video>
-    <!-- <canvas id="canvas" class="d-none"></canvas> -->
-    <!-- <audio id="snapSound" src="audio/snap.wav" preload="auto"></audio> -->
-    <script src="./ai.js"></script>
+	<div class="reveal">
+		<div class="slides">
+			<section id="1">
+				<h2>안녕하세요, 팀 웃상입니다.</h2>
+				<h2>😊</h2>
+				<div id="webcam-container"></div>
+				<div id="label-container"></div>
+			</section>
+			<section>
+				<h3>팀원</h3>
+				<ul>
+					<li>김지수(마케팅, PM) <span style="font-size: 15px;">퓨처랩, 발표자</span></li>
+					<li>소재환(기획, 개발) <span style="font-size: 15px;">퓨처랩, 워크숍 중....</span>
+					</li>
+					<li>이건웅(기획, 아트) <span style="font-size: 15px;">퓨처랩, SGM 출신의 유일한 게임 직군 경력자</span></li>
+				</ul>
+			</section>
+			<section>
+				<h3>프로젝트 배경</h3>
+				<img src="dist/smart.jpg" style="width: 700px;" alt="스마트폰 보는 사람들">
+				<h4>매일 보는 화면에 즐거움을 더할 수 없을까?</h4>
+			</section>
+			<section>
+				<h3>프로젝트 배경</h3>
+				<img src="dist/free.png" style="width: 700px;" alt="배리어프리">
+				<h4>몸이 조금 불편한 사람도 함께 즐길 수 있는 게임을 만들 수 없을까?</h4>
+			</section>
+			<section>
+				<h3>시도해보고자 하는 것</h3>
+				<figure>
+					<img src="dist/webcam.png" style="width: 150px;" alt="얼굴메쉬">
+					<img src="dist/iphone.png" style="width: 150px;" alt="얼굴메쉬">
+					<figcaption>웹캠, 스마트폰 카메라</figcaption>
+				</figure>
+				<p>+</p>
+				<figure>
+					<img src="dist/Tensorflow_logo.png" style="width: 150px;" alt="텐서플로우 로고">
+					<figcaption>인공지능 기술</figcaption>
+				</figure>
+			</section>
+			<section>
+				<h3>만들고자 하는 것</h3>
+				<h4>슈팅 액션, 가볍게 즐길 수 있는 게임</h4>
+			</section>
+			<section>
+				<h3>프로토타입을 통해 보여주고 싶은 핵심 가치</h3>
+				<ol>
+					<li>
+						<h4>배리어프리 컨틀롤러의 가능성 확인</h4>
+					</li>
+					<li>
+						<h4>인공지능 기술의 게임 활용 가능성 확인</h4>
+					</li>
+				</ol>
+			</section>
+			<section>
+				<h2>😊감사합니다😊</h2>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="dist/smile.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			// plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		}).then(init());
+	</script>
 </body>
 
 </html>
