@@ -47,8 +47,8 @@ async function predict() {
     predictionVal = prediction[1].probability.toFixed(2)
     let slideNum = Reveal.getSlidePastCount();
     if(slideNum < 2){
-    if (predictionVal > 0.80) {
-        if (predictionVal - previousVal > 0.80) {
+    if (predictionVal > 0.90) {
+        if (predictionVal - previousVal > 0.90) {
             console.log("Yaho");
             Reveal.slide(1);
             previousVal = predictionVal;
