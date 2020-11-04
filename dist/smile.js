@@ -45,10 +45,10 @@ async function predict() {
         labelContainer.childNodes[i].innerHTML = classPrediction;
     }
     predictionVal = prediction[1].probability.toFixed(2)
-    if (predictionVal > 0.98) {
-        if (predictionVal - previousVal > 0.98) {
+    if (predictionVal > 0.95) {
+        if (predictionVal - previousVal > 0.95) {
             console.log("Yaho");
-            Reveal.next();
+            Reveal.slide(2);
             previousVal = predictionVal;
         }
     } else {
